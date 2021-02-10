@@ -1,7 +1,12 @@
-import { Box } from "@chakra-ui/react";
 import React from "react";
+import { Card } from "ui-neumorphism";
+
 const Main = ({ children }) => {
-  return <Box as="main">{children}</Box>;
+  return (
+    <Card as="main" style={{ alignSelf: "center" }}>
+      {children}
+    </Card>
+  );
 };
 
 export default Main;

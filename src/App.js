@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { Todo } from "./pages";
+import { Todo, Auth } from "./pages";
 
 import { Layout } from "./component/Layout.js";
 
@@ -13,6 +13,9 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/">
+              <Layout children={<Auth />} />
+            </Route>
+            <Route path="/todo">
               <Layout children={<Todo />} />
             </Route>
 
